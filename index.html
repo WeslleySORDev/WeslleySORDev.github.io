@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <audio controls id="player">
-    <source
-      src="https://cast4.hoost.com.br:20270/stream"
-      type='audio/mp4; codecs="mp4a.40.5"'
-    />
-    <source
-      src="https://cast4.hoost.com.br:20270/stream"
-      type="audio/aacp"
-    />
-    <span>Your browser dont support that element.</span>
-  </audio>
-</body>
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-85HVXXDJ0R"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-85HVXXDJ0R");
+    </script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <audio id="player">
+      <source
+        src="https://cast4.hoost.com.br:20270/stream"
+        type='audio/mp4; codecs="mp4a.40.5"'
+      />
+      <source src="https://cast4.hoost.com.br:20270/stream" type="audio/aacp" />
+      <span>Your browser dont support that element.</span>
+    </audio>
+    <div>
+      <button onclick="document.getElementById('player').play()">Play</button>
+      <button onclick="document.getElementById('player').pause()">Pause</button>
+      <button onclick="document.getElementById('player').volume += 0.1">
+        Vol +
+      </button>
+      <button onclick="document.getElementById('player').volume -= 0.1">
+        Vol -
+      </button>
+    </div>
+  </body>
 </html>
